@@ -1,0 +1,177 @@
+steps:
+  STG_CUSTOMER-62843026-b007-4dbe-84b4-25d928d67e36:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: Customer data as defined by TPC-H
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f5cdd4e0-30f9-47df-a8da-e555edecfe35
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: NUMBER(38,0)
+            description: unique key for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_key
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ee89fe0d-2eaf-473f-a8b0-0799c91839f3
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: 8b68a5de-1468-4a70-acac-f21497f89519
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: string
+            description: name for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_name
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 358d3ee1-f2d3-428d-9359-92f0a02281b2
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: c39dc568-6e09-46e7-bd0c-4c1e5df86613
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: string
+            description: Address string for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_address
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b8918bf-b44b-449b-a8f3-b100c204a708
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: d45da501-47c9-4944-8f30-2999fb4228d5
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: NUMBER(38,0)
+            description: country code for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_nation_code
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 810f38f7-2f9c-4679-a055-e47316f93a61
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: 625c85de-d0b6-4672-93b3-8331c6f15b42
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: string
+            description: phone number for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_phone
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e076bcdd-447b-4739-9805-fbc3409a476d
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: 6d9906a9-dd05-4883-b69a-97c14ba8449e
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: NUMBER(12,2)
+            description: account balance for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_balance
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71836694-72f2-47e1-b1e1-122ac3050f23
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: 30a66355-8154-462f-bd83-443fd711361e
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: string
+            description: market segment for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_mkt_segment
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6f8a118-9d0f-4baa-a9da-5427f723d6ef
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: 66e5dcf6-bb28-4574-b818-73906a036949
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: string
+            description: comment for customer from TPC-H
+            hashColumns: []
+            hashDetails: null
+            name: customer_segment
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef064091-3754-4e40-a4b8-79cd9fa5676f
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: e6446093-ff86-4928-8bbe-2a3ea14e58c6
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: customer_country
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 153b4047-aab0-474c-b0bf-c64a41ed2093
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+          - columnReference:
+              columnCounter: 50557a88-9642-4c13-9b39-5635cdfbb4b4
+              stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: customer_region
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4ccf96a-e2d1-47f7-ae52-d192d21e902b
+                    stepCounter: d1f18f6d-0571-417d-b056-4ff4525367e9
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: STG_CUSTOMER_20
+            join:
+              joinCondition: FROM {{ ref('WORK', 'STG_CUSTOMER_20') }} "STG_CUSTOMER_20"
+            name: STG_CUSTOMER
+            noLinkRefs: []
+      name: STG_CUSTOMER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36

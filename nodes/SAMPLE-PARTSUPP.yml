@@ -1,0 +1,93 @@
+steps:
+  PARTSUPP-d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Partsupp data as defined by TPC-H
+      locationName: SAMPLE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9d97c3c5-7162-44fe-a407-cc5923371a51
+              stepCounter: d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_PARTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f1e1d587-4477-4de9-9250-5447df703308
+              stepCounter: d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4125da00-380a-40ac-b63f-abb7dc2776eb
+              stepCounter: d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_AVAILQTY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 133d0491-cc77-4432-a8b1-de90ecbd9f17
+              stepCounter: d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: PS_SUPPLYCOST
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57aece38-8c21-42d7-8eb2-d593dca1fb5b
+              stepCounter: d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc
+            config: {}
+            dataType: VARCHAR(199)
+            defaultValue: ""
+            description: ""
+            name: PS_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'PARTSUPP') }}
+      name: PARTSUPP
+      schema: ""
+      sqlType: Source
+      table: PARTSUPP
+      type: sourceInput
+    stepCounter: d9139bfc-7ca0-4a87-867f-e9b2e5d6efcc
