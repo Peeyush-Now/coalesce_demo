@@ -1,4 +1,4 @@
-name: Refresh Data
+name: build_fact_orders
 
 on:
   # Set a schedule using cron
