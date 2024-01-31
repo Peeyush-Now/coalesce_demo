@@ -415,7 +415,7 @@ steps:
                 LEFT JOIN {{ ref('WORK', 'DIM_PART') }} "DIM_PART"
                 ON "STG_ORDER_LINEITEM_20"."ORDER_ITEM_PART_KEY" = "DIM_PART"."PART_ID"
                 LEFT JOIN {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
-                ON "STG_ORDER_LINEITEM_20"."CUSTOMER_ID" = "DIM_CUSTOMER"."customer_key"
+                ON "STG_ORDER_LINEITEM_20"."CUSTOMER_ID" = "DIM_CUSTOMER"."customer_id"
             name: STG_ORDER_LINEITEM
             noLinkRefs: []
       name: STG_ORDER_LINEITEM
