@@ -32,17 +32,21 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
-          - columnReference:
-              columnCounter: 04554e37-4d41-4930-8888-4f428f73d7ed
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1aa4fd2d-57ad-409f-9bd3-9b6bbfdb06f3
               stepCounter: 53c8e374-2569-4fb2-987d-5ab591d548ec
             dataType: NUMBER(38,0)
             description: unique key for customer from TPC-H
             isBusinessKey: true
-            name: customer_key
+            name: customer_id
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: f5cdd4e0-30f9-47df-a8da-e555edecfe35
+                  - columnCounter: 7a51f5de-2d0f-41ee-a5da-3ed6abeddd17
                     stepCounter: 62843026-b007-4dbe-84b4-25d928d67e36
                 transform: ""
           - columnReference:
@@ -50,6 +54,7 @@ steps:
               stepCounter: 53c8e374-2569-4fb2-987d-5ab591d548ec
             dataType: string
             description: name for customer from TPC-H
+            isChangeTracking: true
             name: customer_name
             nullable: false
             sourceColumnReferences:
@@ -62,6 +67,7 @@ steps:
               stepCounter: 53c8e374-2569-4fb2-987d-5ab591d548ec
             dataType: string
             description: Address string for customer from TPC-H
+            isChangeTracking: true
             name: customer_address
             nullable: false
             sourceColumnReferences:
@@ -86,6 +92,7 @@ steps:
               stepCounter: 53c8e374-2569-4fb2-987d-5ab591d548ec
             dataType: string
             description: phone number for customer from TPC-H
+            isChangeTracking: true
             name: customer_phone
             nullable: false
             sourceColumnReferences:
@@ -188,7 +195,7 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences: []
-                transform: "'Y'"
+                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []

@@ -23,7 +23,7 @@ steps:
             description: unique key for customer from TPC-H
             hashColumns: []
             hashDetails: null
-            name: customer_key
+            name: customer_id
             nullable: false
             sourceColumnReferences:
               - columnReferences:
