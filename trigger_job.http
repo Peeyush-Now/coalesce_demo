@@ -1,0 +1,39 @@
+// Deploy Token from Coalesce.io
+@authToken=AMf-vBwKVq5odXCHE_tlF1ixySz9Y5wjXgyDYQ4Y943DqrWHsJdtV5SCG2zYINQUTbEL1l75quu9PYjb9WF7QAtofgzOPoORH0o15DAWoxNF6KhcK4Ld62bVBMjx0OvvKDMmlYnx4fOxhqVaAahfdAHzGXwK172ncfHscEuPRab5VlVAB62R4efd0t2YNjgtbYs5NMzcdn8qv9IAGzc_Piu8_hGf-CTniQ 
+@baseUrl=https://app.coalescesoftware.io
+
+// Snowflake Connection details
+@snowflakeUsername=PC_COALESCE_USER
+@snowflakePassword=Coalesce1
+
+// get a list of environments
+GET https://app.coalescesoftware.io/api/v1/environments HTTP/1.1
+Authorization: Bearer {{authToken}}
+
+###
+// Run a job
+POST https://app.coalescesoftware.io/scheduler/startRun HTTP/1.1
+Authorization: Bearer {{authToken}}
+accept: application/json
+content-type: application/json
+
+{
+  "runDetails": {
+    "parallelism": 16,
+    "environmentID": "3",
+    "jobID": "1"
+  },
+  "userCredentials": {
+    "snowflakeUsername": "{{snowflakeUsername}}",
+    "snowflakePassword": "{{snowflakePassword}}",
+    "snowflakeAuthType": "Basic"
+  }
+  
+}
+
+###
+// get job run status
+GET https://app.coalescesoftware.io/scheduler/runStatus?runCounter=70 HTTP/1.1
+Authorization: Bearer {{authToken}}
+accept: application/json
+content-type: application/json
